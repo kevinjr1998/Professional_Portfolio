@@ -1,5 +1,12 @@
 :root{
     --model_border: 2px dashed black;
+    --element_border: 2% solid rgb(67, 67, 116);
+    --primary_color: rgb(67, 67, 116);
+   
+}
+
+*{
+    background-color: rgb(224, 222, 228);
 }
 
 
@@ -13,8 +20,7 @@ header{
     justify-content: space-between;
     display: flex;
     width: 100%;
-    border: var(--model_border);
-    padding: 5px;
+    padding: 2% 2% 2% 0;
 }
 
 .float-right{
@@ -28,22 +34,23 @@ header{
 
 
 h1{
+    padding: 0 0 0 2%;
     display: inline;
     font-size: 200%;
-    border: var(--model_border);
 }
 
 
 nav{
 
     justify-content: space-between;
-    display: inline;
-    width: 40%;
-    border: var(--model_border);
+    display: flex;
+    width: 45%;
 }
 
-nav content{
+nav p{
+    display: inline;
     justify-content: right;
+    width: 23%;
 }
 
 
@@ -62,12 +69,14 @@ nav content p{
     justify-content: space-between;
     display: flex;
     flex-wrap: wrap;
+    padding: 0 0 1% 0;
 }
 
 #contact{
     justify-content: space-between;
     display: flex;
     flex-wrap: wrap;
+    padding: 0 0 1% 0;
 }
 
 aside{
@@ -79,6 +88,7 @@ aside{
 
 content{
     width: 76%;
+    padding: 1% 0 0 0;
 
 }
 
@@ -93,11 +103,33 @@ h2{
     width: 25%;
     object-fit: contain;
     display: inline;
+    border: 2% solid var(--primary_color);
+    padding: 0 1% 0 0;
 }
 
 p{
-    /* display: inline; */
+    /* padding: 0 0 0 1%; */
 }
+
+.screenshot_main{
+    width: 90%;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+    padding: 1%;
+
+}
+
+.screenshot_sub{
+    width: 45%;
+    object-fit: contain;
+    display: flex;
+    border: var(--element_border);
+    
+
+}
+
+
 
 
 footer{
