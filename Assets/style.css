@@ -2,11 +2,18 @@
     --model_border: 2px dashed black;
     --element_border: 2% solid rgb(67, 67, 116);
     --primary_color: rgb(67, 67, 116);
+    --secondary_color: rgb(215, 219, 236); 
    
 }
 
 *{
     background-color: rgb(224, 222, 228);
+    
+    
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 
@@ -14,6 +21,9 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+a{
+    
+}
 
 
 header{
@@ -21,6 +31,7 @@ header{
     display: flex;
     width: 100%;
     padding: 2% 2% 2% 0;
+    background-color: var(--primary_color);
 }
 
 .float-right{
@@ -31,12 +42,26 @@ header{
     float: left;
 }
 
+a{
+    background-color: var(--primary_color);
+}
+
+
 
 
 h1{
-    padding: 0 0 0 2%;
+    margin: 0 0 0 2%;
     display: inline;
     font-size: 200%;
+    color: var(--secondary_color);
+    background-color: var(--primary_color);
+    text-decoration: none;
+
+}
+
+header a{
+    color: var(--secondary_color);
+
 }
 
 
@@ -45,12 +70,15 @@ nav{
     justify-content: space-between;
     display: flex;
     width: 45%;
+    background-color: var(--primary_color);
 }
 
 nav p{
     display: inline;
-    justify-content: right;
+    text-align: right;
+    color: var(--secondary_color);
     width: 23%;
+    background-color: var(--primary_color);
 }
 
 
@@ -76,24 +104,24 @@ nav content p{
     justify-content: space-between;
     display: flex;
     flex-wrap: wrap;
-    padding: 0 0 1% 0;
+    margin: 0 0 1% 0;
 }
 
 aside{
     width: 20%;
     display: flex;
-    padding: 1%;
+    margin: 1%;
     justify-content: flex-end;
 }
 
 content{
     width: 76%;
-    padding: 1% 0 0 0;
+    margin: 1% 0 0 0;
 
 }
 
 h2{
-    padding: 1%;
+    margin: 1%;
     width: fit-content;
     display: inline;
 
@@ -103,8 +131,8 @@ h2{
     width: 25%;
     object-fit: contain;
     display: inline;
-    border: 2% solid var(--primary_color);
-    padding: 0 1% 0 0;
+    border: 2% solid black;
+    margin: 0 1% 0 0;
 }
 
 p{
@@ -112,11 +140,12 @@ p{
 }
 
 .screenshot_main{
-    width: 90%;
+    width: 99%;
     object-fit: contain;
     display: block;
-    margin: auto;
-    padding: 1%;
+    margin: auto; 
+    border: 1% solid black;
+   
 
 }
 
@@ -133,5 +162,7 @@ p{
 
 
 footer{
+    display: flex;
+    justify-content: center;
     
 }
