@@ -1,8 +1,7 @@
 :root{
-    --model_border: 2px dashed black;
     --element_border: .25rem solid rgb(67, 67, 116);
     --primary_color: rgb(67, 67, 116);
-    --secondary_color: rgb(215, 219, 236); 
+    --secondary_color: rgb(118, 226, 215); 
     --border_rad: .15rem;
    
 }
@@ -38,7 +37,7 @@ header{
     float: left;
 }
 
-a{
+nav a{
     background-color: var(--primary_color);
     transition: all 0.5s ease-in-out;
     border-radius: var(--border_rad);
@@ -51,11 +50,17 @@ a{
 h1{
     margin: 0 0 0 2%;
     display: inline;
-    font-size: 200%;
+    font-size: 5vw;
     color: var(--secondary_color);
     background-color: var(--primary_color);
     text-decoration: none;
 
+}
+
+h1 a{
+    background-color: var(--primary_color);
+    transition: all 0.5s ease-in-out;
+    border-radius: var(--border_rad);
 }
 
 header a{
@@ -68,15 +73,16 @@ nav{
 
     justify-content: space-between;
     display: flex;
-    width: 45%;
+    width: 50%;
     background-color: var(--primary_color);
 }
 
 nav p{
     display: inline;
-    text-align: right;
+    text-align: center;
     color: var(--secondary_color);
-    width: 23%;
+    width: 24%;
+    font-size: 2.5vw;
     background-color: var(--primary_color);
     margin: 0 2% 0 0;
 }
@@ -84,15 +90,28 @@ nav p{
 
 nav content p{
     display: inline;
+    font-size: 2.5vw;
+}
+
+content{
+    width: 75%;
+    margin: 1% 0 0 0;
+    justify-content: left;
+
 }
 
 #about{
-    justify-content: space-between;
+    justify-content: left;
     display: flex;
     flex-wrap: wrap;
-    padding: 0 0 1% 0;
+    margin: 0 0 0.5% 0;
+    width: 100;
 }
 
+#about p{
+    text-align: justify;
+    font-size: 2.5vw;
+}
 
 .headshot{
     width: 25%;
@@ -101,21 +120,24 @@ nav content p{
     border: var(--element_border);
     margin: 0 1% 0 0;
     border-radius: var(--border_rad);
+
 }
 
 
 #portfolio{
-    justify-content: space-between;
+    justify-content: left;
     display: flex;
     flex-wrap: wrap;
-    padding: 0 0 1% 0;
+    margin: 0 0 0.5% 0;
 }
 
 #contact{
-    justify-content: space-between;
+    justify-content: left;
     display: flex;
     flex-wrap: wrap;
-    margin: 0 0 1% 0;
+    margin: 0 0 0.5% 0;
+    width: auto;
+    font-size: 3vw;
 }
 
 aside{
@@ -125,39 +147,78 @@ aside{
     justify-content: flex-end;
 }
 
-content{
-    width: 76%;
-    margin: 1% 0 0 0;
-
-}
 
 h2{
     margin: 1%;
     width: fit-content;
-    display: inline;
+    display: flex;
+    color: red;
+    font-size: 4vw;
+
 
 }
 
-p{
-    /* padding: 0 0 0 1%; */
+card_main{
+    display: flex;
+    width: 100%;
+    justify-content: left;
+    align-items: flex-start;
+}
+
+card_sub{
+    display: flex;
+    width: 45%;
+    justify-content: left;
+    align-items: flex-start; 
+
+}
+
+
+img_title_main {
+    flex: 1 1 40%;
+    position: absolute;
+    border: var(--element_border);
+    background-color: var(--secondary_color);
+    margin-bottom: -2rem;
+    margin-left: .15rem;
+    border-radius: var(--border_rad);
+    width: auto;
+    padding-right: .15rem;
+    font-size: 3vw;
+}
+
+
+img_title_sub {
+    flex: 1 1 40%;
+    position: absolute;
+    border: var(--element_border);
+    background-color: var(--secondary_color);
+    margin-top: .23rem;
+    margin-left: .10rem;
+    border-radius: var(--border_rad);
+    width: auto;
+    padding-right: .15rem;
+    font-size: 2vw;
 }
 
 .screenshot_main{
-    width: 98%;
+    width: 100%;
     object-fit: contain;
     display: block;
-    margin: auto; 
+    margin-left: auto; 
+    margin-right: auto;
     border: var(--element_border);
     border-radius: var(--border_rad);
     
 }
 
 .screenshot_sub{
-    width: 45%;
+    width: 100%;
     object-fit: contain;
     display: flex;
     border: var(--element_border);
     border-radius: var(--border_rad);
+    margin: .25rem .30%;
 }
 
 
@@ -169,6 +230,11 @@ footer{
     
 }
 
+footer h3{
+    font-size: 2.9vw;
+
+}
+
 
 
 /* pseudo classes and elements down here */
@@ -177,3 +243,29 @@ a:hover, a:focus {
     box-shadow: inset 0px 0px 8px rgba(232, 102, 236, 1), 0px 0px 15px rgba(232, 102, 236, 1);
 }
 
+
+card_main .screenshot_main:hover, card_main .screenshot_main:focus, card_sub .screenshot_sub:hover, 
+card_sub .screenshot_sub:focus {
+    opacity: 0.5;
+    box-shadow: none;
+}
+
+img_title_sub:hover, img_title_sub:focus, img_title_main:hover, img_title_main:focus{
+    opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+    #about, #portfolio, #contact, header, nav, section, aside, footer {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    /* nav{ jus} */
+
+    nav p{
+        width: 48%
+        j
+    }
+
+}
