@@ -1,27 +1,33 @@
+/*root declares css variable which are used to sstyle borders and the colours of elements and text */
 :root{
     --element_border: .25rem solid rgb(67, 67, 116);
     --primary_color: rgb(67, 67, 116);
     --secondary_color: rgb(118, 226, 215); 
     --border_rad: .15rem;
-   
 }
 
+/* sets color of background */
 *{
     background-color: rgb(224, 222, 228);
-
-    
 }
 
+/* this makes it so that all links to anchors on webpage will scroll instead */
 html{
     scroll-behavior: smooth;
 }
 
-
+/* font family declared */
 body{
     font-family: Arial, Helvetica, sans-serif;
-
 }
 
+/* allows background shadow for all hyperlinks to ease in */
+a {
+    transition: all 0.5s ease-in-out;
+}
+
+/* header set to flex, space between justification allows child elements to float left and right to the edges of element.
+padding added to increase size of background  */
 header{
     justify-content: space-between;
     display: flex;
@@ -30,6 +36,12 @@ header{
     background-color: var(--primary_color);
 }
 
+header a{
+    color: var(--secondary_color);
+
+}
+
+/* float left and float right added as utility classes */
 .float-right{
     float: right;
 }
@@ -38,38 +50,7 @@ header{
     float: left;
 }
 
-nav a{
-    background-color: var(--primary_color);
-    transition: all 0.5s ease-in-out;
-    border-radius: var(--border_rad);
-
-}
-
-
-
-
-h1{
-    margin: 0 0 0 2%;
-    display: flex;
-    font-size: 5vw;
-    color: var(--secondary_color);
-    background-color: var(--primary_color);
-    text-decoration: none;
-    margin-bottom: .5rem;
-
-}
-
-h1 a{
-    background-color: var(--primary_color);
-    transition: all 0.5s ease-in-out;
-    border-radius: var(--border_rad);
-}
-
-header a{
-    color: var(--secondary_color);
-
-}
-
+/* css for the nav tag written below */
 
 nav{
 
@@ -88,19 +69,57 @@ nav p{
     background-color: var(--primary_color);
     margin: 0 2% 0 0;
 }
-
-
-nav .Main_Content p{
-    display: inline;
-    font-size: 2.5vw;
+/* hyperlinks given a transition timer to change between when hovers and when not hovered, down below */
+nav a{
+    background-color: var(--primary_color);
+    transition: all 0.5s ease-in-out;
+    border-radius: var(--border_rad);
 }
 
+/* css for h1 tag */
+
+h1{
+    margin: 0 0 0 2%;
+    display: flex;
+    font-size: 5vw;
+    color: var(--secondary_color);
+    background-color: var(--primary_color);
+    text-decoration: none;
+    margin-bottom: .5rem;
+
+}
+
+h1 a{
+    background-color: var(--primary_color);
+    transition: all 0.5s ease-in-out;
+    border-radius: var(--border_rad);
+}
+
+/* css for aside tag, set to flex and be allighed to the right. */
+aside{
+    width: 18%;
+    display: flex;
+    margin: 1%;
+    justify-content: flex-end;
+}
+
+/*  margin used for spacing */
 .Main_Content{
     width: 75%;
     margin: 1% 0 0 0;
     justify-content: left;
 
 }
+/* sets the properties of the headshot image */
+.headshot{
+    width: 25%;
+    object-fit: contain;
+    display: inline;
+    border: var(--element_border);
+    margin: 0 1% 0 0;
+    border-radius: var(--border_rad);
+}
+
 
 #about{
     justify-content: left;
@@ -109,21 +128,13 @@ nav .Main_Content p{
     margin: 1.5rem 0 0.5% 0;
 
 }
+/* used to set text to justify and font size relative to viewport */
 
 #about p{
     text-align: justify;
     font-size: 2vw;
 }
 
-.headshot{
-    width: 25%;
-    object-fit: contain;
-    display: inline;
-    border: var(--element_border);
-    margin: 0 1% 0 0;
-    border-radius: var(--border_rad);
-
-}
 
 
 #portfolio{
@@ -133,15 +144,7 @@ nav .Main_Content p{
     margin: 1.5rem 0 0.5% 0;
 }
 
-
-aside{
-    width: 18%;
-    display: flex;
-    margin: 1%;
-    justify-content: flex-end;
-}
-
-
+/* sets the style of the section headers on page */
 h2{
     margin: 1%;
     width: fit-content;
@@ -152,22 +155,17 @@ h2{
 
 }
 
+/*  style for cards and images set here */
+
 card_main{
     display: flex;
     width: 99.2%;
     justify-content: left;
     align-items: flex-start;
+    margin-bottom: 2rem;
 }
 
-card_sub{
-    display: flex;
-    width: 45%;
-    justify-content: left;
-    align-items: flex-start; 
-
-}
-
-
+/* img title set to absolute so that it sits over the top corner of image */
 img_title_main {
     flex: 1 1 90%;
     position: absolute;
@@ -178,8 +176,27 @@ img_title_main {
     width: auto;
     padding-right: .15rem;
     font-size: 3vw;
+    
+}
+/* object-fit: contain preserves image dimention ratios */
+.screenshot_main{
+    width: 100%;
+    object-fit: contain;
+    display: block;
+    border: var(--element_border);
+    border-radius: var(--border_rad);
+    justify-content: left;
+    align-items: flex-start;
+    transition: all 0.5s ease-in-out;
 }
 
+card_sub {
+    display: flex;
+    width: 45%;
+    justify-content: left;
+    align-items: flex-start; 
+
+}
 
 img_title_sub {
     flex: 1 1 40%;
@@ -194,17 +211,6 @@ img_title_sub {
     font-size: 2vw;
 }
 
-.screenshot_main{
-    width: 100%;
-    object-fit: contain;
-    display: block;
-    border: var(--element_border);
-    border-radius: var(--border_rad);
-    justify-content: left;
-    align-items: flex-start;
-    
-}
-
 .screenshot_sub{
     width: 98%;
     object-fit: contain;
@@ -212,17 +218,7 @@ img_title_sub {
     border: var(--element_border);
     border-radius: var(--border_rad);
     margin: .25rem .30%;
-}
-
-
-
-
-footer{
-    display: flex;
-    justify-content: center;
-    background-color: var(--primary_color);
-    padding: 2rem 0;
-    width: 100%;
+    transition: all 0.5s ease-in-out;
 }
 
 #contact{
@@ -239,16 +235,18 @@ footer{
     font-size: 2.5vw;
 }
 
-
 #contact p{
     width: 100%;
     font-weight: bold;
-    
-
 }
 
-
-
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: var(--primary_color);
+    padding: 2rem 0;
+    width: 100%;
+}
 
 footer h3{
     text-align: center;
@@ -259,25 +257,23 @@ footer h3{
 
 }
 
-
-
 /* pseudo classes and elements down here */
+
+/* adds shadow-box to hyperlinks when hovered/focued */
 
 a:hover, a:focus {
     box-shadow: inset 0px 0px 8px rgba(232, 102, 236, 1), 0px 0px 15px rgba(232, 102, 236, 1);
 }
 
+/* halves opacity when the images are hovered */
 
 card_main .screenshot_main:hover, card_main .screenshot_main:focus, card_sub .screenshot_sub:hover, 
-
 card_sub .screenshot_sub:focus {
     opacity: 0.5;
-    box-shadow: none;
 }
 
-img_title_sub:hover, img_title_sub:focus, img_title_main:hover, img_title_main:focus{
-    opacity: 1;
-}
+/* changes flex direction when the viewpord width changes (i.e. mobile phone) also justifies and aligns
+ content of all of the below ids and elements to center, removes horizontal margins makes onjects max width */
 
 @media screen and (max-width: 768px) {
     #about, #portfolio, #contact, header, nav, section, aside, footer {
@@ -301,22 +297,16 @@ img_title_sub:hover, img_title_sub:focus, img_title_main:hover, img_title_main:f
 
     card_main {
         width: 100%;
-        align-items: flex-start;
-
-        
+        align-items: flex-start; 
     }
  
     card_sub {
         width: 100%;
-
-        
     }
 
     .screenshot_main  {
-    
         width: 98%;
         margin-bottom: 2rem;
-
     }
 
     .screenshot_sub  {
@@ -328,16 +318,15 @@ img_title_sub:hover, img_title_sub:focus, img_title_main:hover, img_title_main:f
         margin: 0;
     }
 
+/* removes float from the portfolio images with float when on mobile */
+
    #portfolio .float-left, #portfolio .float-right {
         float: none;
     }
-
-    
 
     nav p {
         width: 35%;
         font-size: 5vw;
         margin: 0.3rem;
-        
     }
 }
