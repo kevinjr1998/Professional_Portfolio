@@ -106,7 +106,7 @@ nav .Main_Content p{
     justify-content: left;
     display: flex;
     flex-wrap: wrap;
-    margin: 0 0 0.5% 0;
+    margin: 1.5rem 0 0.5% 0;
 
 }
 
@@ -130,17 +130,9 @@ nav .Main_Content p{
     justify-content: left;
     display: flex;
     flex-wrap: wrap;
-    margin: 0 0 0.5% 0;
+    margin: 1.5rem 0 0.5% 0;
 }
 
-#contact{
-    justify-content: left;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 0 0.5% 0;
-    width: auto;
-    font-size: 3vw;
-}
 
 aside{
     width: 18%;
@@ -181,7 +173,6 @@ img_title_main {
     position: absolute;
     border: var(--element_border);
     background-color: var(--secondary_color);
-    margin-bottom: -2rem;
     margin-left: .15rem;
     border-radius: var(--border_rad);
     width: auto;
@@ -207,8 +198,6 @@ img_title_sub {
     width: 100%;
     object-fit: contain;
     display: block;
-    /* margin-left: auto; 
-    margin-right: auto; */
     border: var(--element_border);
     border-radius: var(--border_rad);
     justify-content: left;
@@ -233,21 +222,40 @@ footer{
     justify-content: center;
     background-color: var(--primary_color);
     padding: 2rem 0;
+    width: 100%;
 }
 
-#contact p{
+#contact{
+    justify-content: left;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1.5rem 0 0.5% 0;
+    width: auto;
+    font-size: 3vw;
+}
 
-    text-align: center;
+#contact .Main_Content{
+    display: inline;
+    font-size: 2.5vw;
+}
+
+
+#contact p{
+    width: 100%;
+    font-weight: bold;
     
 
 }
 
 
 
+
 footer h3{
+    text-align: center;
     color: var(--secondary_color);
     font-size: 4vw;
     background-color: var(--primary_color);
+    width: 100%
 
 }
 
